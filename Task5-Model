@@ -1,0 +1,31 @@
+Building Machine Learning Models
+we have trained several Machine Learning models and compare their results.need to use the predictions on the training set to compare the algorithms with each other.
+X_train = train_df.drop("Survived", axis=1)
+Y_train = train_df["Survived"]
+X_test  = test_df.drop("PassengerId", axis=1).copy()
+Stochastic Gradient Descent (SGD):
+sgd = linear_model.SGDClassifier(max_iter=5, tol=None)
+sgd.fit(X_train, Y_train)
+Y_pred = sgd.predict(X_test)
+
+sgd.score(X_train, Y_train)
+
+acc_sgd = round(sgd.score(X_train, Y_train) * 100, 2)
+
+Random Forest:
+random_forest = RandomForestClassifier(n_estimators=100)
+random_forest.fit(X_train, Y_train)
+
+Y_prediction = random_forest.predict(X_test)
+
+random_forest.score(X_train, Y_train)
+acc_random_forest = round(random_forest.score(X_train, Y_train) * 100, 2)
+
+
+Gaussian Naive Bayes:
+gaussian = GaussianNB() gaussian.fit(X_train, Y_train)  Y_pred = gaussian.predict(X_test)  acc_gaussian = round(gaussian.score(X_train, Y_train) * 100, 2)
+
+
+
+Decision Tree
+decision_tree = DecisionTreeClassifier() decision_tree.fit(X_train, Y_train)  Y_pred = decision_tree.predict(X_test)  acc_decision_tree = round(decision_tree.score(X_train, Y_train) * 100, 2)
