@@ -1,0 +1,17 @@
+1.‘Fare’ is a float and we have to deal with 4 categorical features: Name, Sex, Ticket and Embarked. Lets investigate and transfrom one after another.
+Fare:
+Converting “Fare” from float to int64, using the “astype()” function.
+
+2.Name:
+We will use the Name feature to extract the Titles from the Name, so that we can build a new feature out of that.
+
+3.Sex:
+Convert ‘Sex’ feature into numeric.
+
+4.Since the Ticket attribute has unique tickets, it will be a bit tricky to convert them into useful categories. So we will drop it from the dataset.
+
+5.Embarked:
+Convert ‘Embarked’ feature into numeric.
+
+
+Please check build_features.py file
