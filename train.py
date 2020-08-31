@@ -14,8 +14,8 @@ from sklearn.svm import SVC, LinearSVC
 from sklearn.naive_bayes import GaussianNB
 
     # getting data
-train_df = pd.read_csv("C:/Users/Pooja/AppData/Local/Programs/Python/Python38-32/Junior-Data-Science-Software-Engineer-master/data/train.csv")
-test_df = pd.read_csv("C:/Users/Pooja/AppData/Local/Programs/Python/Python38-32/Junior-Data-Science-Software-Engineer-master/data/valnew.csv")
+train_df = pd.read_csv(".../Junior-Data-Science-Software-Engineer-master/data/train.csv")
+test_df = pd.read_csv(".../Junior-Data-Science-Software-Engineer-master/data/valnew.csv")
 
 train_df['Ticket'].describe()
 data = [train_df, test_df]
@@ -127,12 +127,18 @@ acc_decision_tree = round(decision_tree.score(X_train, Y_train) * 100, 2)
 
 #Which is the best Model ?
 results = pd.DataFrame({
-    'Model': ['Random Forest','Stochastic Gradient Decent','Gaussian Naive Bayes','Decision Tree','Perceptron'],
-    'Score': [acc_random_forest,acc_sgd,acc_gaussian,acc_decision_tree,acc_perceptron]})
+    'Model': ['Random Forest','Stochastic Gradient Decent','Gaussian Naive Bayes','Decision Tree'],
+    'Score': [acc_random_forest,acc_sgd,acc_gaussian,acc_decision_tree]})
 result_df = results.sort_values(by='Score', ascending=False)
 result_df = result_df.set_index('Score')
 result_df.head()
 
 print(result_df)
+from sklearn.model_selection import cross_val_score
+rf = RandomForestClassifier(n_estimators=100)
+scores = cross_val_score(rf, X_train, Y_train, cv=10, scoring = "accuracy")
+print("Scores:", scores)
+print("Mean:", scores.mean())
+print("Standard Deviation:", scores.std())
 
 
