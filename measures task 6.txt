@@ -1,0 +1,16 @@
+                             Model
+Score                             
+100.00               Random Forest
+100.00               Decision Tree
+77.06         Gaussian Naive Bayes
+63.72   Stochastic Gradient Decent
+
+As we can see, the Random Forest classifier goes on the first place. But first, let us check, how random-forest performs, when we use cross validation.
+
+Scores: [0.67901235 0.77777778 0.7875     0.8875     0.8625     0.8
+ 0.825      0.8375     0.8375     0.825     ]
+Mean: 0.811929012345679
+Standard Deviation: 0.054304766184152746
+
+This looks much more realistic than before. Our model has a average accuracy of 81% with a standard deviation of 5 %. The standard deviation shows us, how precise the estimates are .
+ started training different machine learning models, picked one of them (random forest) and applied cross validation on it.
