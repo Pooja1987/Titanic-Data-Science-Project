@@ -2,8 +2,8 @@ import pandas as pd
 import sklearn
 import preprocess as pp
 
-train_df = pd.read_csv("C:/Users/Pooja/AppData/Local/Programs/Python/Python38-32/Junior-Data-Science-Software-Engineer-master/data/train.csv")
-test_df = pd.read_csv("C:/Users/Pooja/AppData/Local/Programs/Python/Python38-32/Junior-Data-Science-Software-Engineer-master/data/valnew.csv")
+train_df = pd.read_csv(".../Junior-Data-Science-Software-Engineer-master/data/train.csv")
+test_df = pd.read_csv(".../Junior-Data-Science-Software-Engineer-master/data/valnew.csv")
 test_df.info()
 
 #fare -converting float to int
