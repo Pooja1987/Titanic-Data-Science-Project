@@ -1,7 +1,7 @@
 import pandas as pd
 import pickle as pk
 
-df = pd.read_csv("C:/Users/Pooja/AppData/Local/Programs/Python/Python38-32/Junior-Data-Science-Software-Engineer-master/data/valnew.csv")
+df = pd.read_csv(".../data/valnew.csv")
 df.info()
 df.dropna(inplace = True)
 
