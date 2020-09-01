@@ -28,6 +28,4 @@ for i in df.iterrows():
         ok = ok + 1
 
 print("accuracy is", ok / df.shape[0])
-print(new_df)
-print(new_df==df)
-print(type(new_df))
+
